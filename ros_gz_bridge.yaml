@@ -1,0 +1,25 @@
+# Full set of configurations
+- ros_topic_name: "propeller_joint/cmd_thrust"
+  gz_topic_name: "model/my_lrauv/joint/propeller_joint/cmd_thrust"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  subscriber_queue: 10
+  lazy: false
+  direction: ROS_TO_GZ
+ 
+- ros_topic_name: "vertical_fins_joint/cmd_pos"
+  gz_topic_name: "model/my_lrauv/joint/vertical_fins_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  subscriber_queue: 10
+  lazy: false
+  direction: ROS_TO_GZ
+ 
+- ros_topic_name: "horizontal_fins_joint/cmd_pos"
+  gz_topic_name: "model/my_lrauv/joint/horizontal_fins_joint/0/cmd_pos"
+  ros_type_name: "std_msgs/msg/Float64"
+  gz_type_name: "gz.msgs.Double"
+  subscriber_queue: 10
+  lazy: false
+  direction: ROS_TO_GZ
+
