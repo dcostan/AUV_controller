@@ -1,11 +1,13 @@
 #ifndef GAZEBONODE_H
 #define GAZEBONODE_H
 
-#include <QObject>
 #include <QTimer>
+#include <QDebug>
+#include <QObject>
 #include <QTcpSocket>
 #include <QUdpSocket>
-#include <QDebug>
+#include <QDataStream>
+
 #include <string>
 #include <thread>
 #include <memory>

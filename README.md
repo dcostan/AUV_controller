@@ -23,11 +23,16 @@ Different packages are required to build this application.
    ```
    sudo apt install qt6-base-dev qt6-tools-dev
    ```
+   or alternatively Qt5
+
+   ```
+   sudo apt install qtbase5-dev qttools5-dev
+   ```
 *  Install Gazebo
 
    ```
    sudo apt install gz-ionic ros-rolling-ros-gz 
-   ```   
+   ```
 *  And finally install gz-transport version 14 using the [tutorial](https://gazebosim.org/api/transport/14/installation.html).
 
 ## Configuring the underwater simulation
