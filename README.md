@@ -76,7 +76,7 @@ ns uwApplicationTCPwithPosition.tcl
 On another terminal in the same folder run the bridge.
 
 ```
-RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=4000 ros2 launch ros_gz_bridge ros_gz_bridge.launch.py name:=ros_gz_bridge config_file:=ros_gz_bridge.yaml bridge_name:=auv_bridge
+RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=4000 ros2 launch ./ros_gz_bridge.launch.py name:=ros_gz_bridge config_file:=ros_gz_bridge.yaml bridge_name:=auv_bridge
 ```
 
 In this way, when you open the Gazebo simulation, the application will automatically catch the signals coming from ROS and it will send them to the AUV to control its actuators.
@@ -94,13 +94,14 @@ In order to deploy a working underwater simulation you have to open four differe
    2. In the second one start Gazebo
       
       ```
+      export GZ_SIM_RESOURCE_PATH=:$HOME/gazebo_maritime/models
       gz sim ~/gazebo_maritime/worlds/buoyant_lrauv.sdf
       ```
 
    2. In the third one launch the ros-gz bridge
 
       ```
-      RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=4000 ros2 launch ros_gz_bridge ros_gz_bridge.launch.py name:=ros_gz_bridge config_file:=ros_gz_bridge.yaml bridge_name:=auv_bridge
+      RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=4000 ros2 launch ./ros_gz_bridge.launch.py name:=ros_gz_bridge config_file:=ros_gz_bridge.yaml bridge_name:=auv_bridge
       ```
 
    2. In the fourth one execute the controller
