@@ -53,7 +53,9 @@ git clone https://github.com/dcostan/AUV_controller.git
 Move inside the ```AUV_controller``` directory.
 
 ```
-cmake .
+mkdir build
+cd build
+cmake ../
 make
 ```   
 
@@ -107,7 +109,7 @@ In order to deploy a working underwater simulation you have to open four differe
    2. In the fourth one execute the controller
 
       ```
-      RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=5000 ./AUV_controller
+      RMW_IMPLEMENTATION=rmw_desert DESERT_PORT=5000 ./build/AUV_controller
       ```
 
 If you run them at the same time you will end up with a controller interface that can manage the AUV joints using acoustic undewater communications through the DESERT protocols stack. Note that the last two terminals contain the nodes involved in this scenario, and each of them is associated to a different TCP port as described in the TCL source.
